@@ -1,0 +1,38 @@
+// See https://getuikit.com/docs/sass
+
+// UIKit Custom variables and variable overwrites.
+$global-link-color: #DA7D02;
+
+// Import UIKit default variables and available mixins.
+@import "uikit/src/scss/variables";
+@import "uikit/src/scss/mixins";
+
+// UiKit custom mixin overwrites.
+@mixin hook-card() { color: #000; }
+
+// Import UIkit.
+@import "uikit/src/scss/uikit";
+
+// Example SCSS rule.
+.uk-card {
+    position: relative;
+    box-sizing: border-box;
+
+    // mixin to allow adding new declaration.
+    @include hook-card();
+}
+
+// Example mixin to add new declaration.
+@mixin hook-card() { color: #000; }
+
+// Example reverse hook.
+@mixin hook-inverse-button-default(){
+    background: lime;
+}
+
+// Example misc mixin
+@mixin hook-card-misc() {
+
+    // new rule
+    .uk-card a { color: #f00; }
+}

@@ -1,0 +1,3 @@
+{{ $headerImage := (resources.Get "img/logo.png").Resize "x50" -}}
+<img src="{{ $headerImage.Permalink }}">
+<h4>Example Header</h4>

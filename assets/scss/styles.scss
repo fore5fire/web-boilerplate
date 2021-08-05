@@ -1,0 +1,27 @@
+$dark_background_color: #EFEFEF;
+
+$footer_height: 5em;
+
+@import "uikit";
+@import '@fortawesome/fontawesome-free/css/all.min';
+
+h1 {
+	font-size: 20px;
+}
+
+header {
+	background-color: $dark_background_color;
+}
+
+#push-footer {
+	min-height: calc(100vh - #{$footer_height});
+}
+
+footer {
+	height: $footer_height;
+	background-color: $dark_background_color;
+}
+
+.active {
+	font-weight: bold;
+}

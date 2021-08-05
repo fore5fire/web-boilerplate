@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h1>
+	Hello list world!
+</h1>
+<ul>
+{{ range .Pages }}
+<li>{{ .Title }}</li>
+{{ end }}
+</ul>
+{{ end }}

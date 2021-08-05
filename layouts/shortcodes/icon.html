@@ -1,0 +1,4 @@
+{{ $style := default "regular" (.Get "style") -}}  
+{{ $styles := dict "regular" "fa" "solid" "fas" "brand" "fab" "regular" "far" "light" "fal" "duotone" "fad" -}}
+
+<i class='{{ index $styles $style }} fa-{{ .Get "icon" }}'></i>

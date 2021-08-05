@@ -1,0 +1,31 @@
+{
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/katcheCode/carriecolglazier/issues"
+  },
+  "devDependencies": {
+    "@types/uikit": "^3.3.2",
+    "@types/web": "^0.0.15",
+    "hugo-bin": "^0.75.0"
+  },
+  "homepage": "https://github.com/katcheCode/carriecolglazier#readme",
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
+  "name": "carriecolglazier",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katcheCode/carriecolglazier.git"
+  },
+  "scripts": {
+    "build": "hugo",
+    "new": "hugo new",
+    "start": "hugo serve --buildDrafts"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "uikit": "^3.7.2"
+  }
+}

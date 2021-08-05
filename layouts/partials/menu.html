@@ -1,0 +1,14 @@
+<ul>
+	{{ range .Site.Menus.main }}
+	<li>
+		<a class='{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}active{{ end }}' href="{{ .URL }}">{{ .Name }}</a>
+		{{ if .HasChildren }}
+		<ul>
+			{{ range .Children }}
+				<li><a class='{{ if $.IsMenuCurrent "main" . }}active{{ end }}' href="{{ .URL }}">{{ .Name }}</a></li>
+			{{ end }}
+		</ul>
+		{{ end }}
+	</li>
+	{{ end }}
+</ul>
