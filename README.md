@@ -56,6 +56,8 @@ This site uses
 - `laouts/partials/` contains partial pages which are used in other templates.
 - `layouts/shortcodes/` contains shortcode definitions which can be used from
   Markdown content [See docs](https://gohugo.io/content-management/shortcodes/).
+- `resources/` is a cache for assets that have been processed. It should not be
+  modified by hand.
 - `static/` contains additional files which do not need preprocessing and are
   made available on the site as-is.
 - `package.json` contains versions for the site's dependencies. While these are

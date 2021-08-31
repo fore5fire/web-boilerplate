@@ -21,7 +21,7 @@
   "scripts": {
     "build": "hugo",
     "new": "hugo new",
-    "start": "hugo serve --buildDrafts"
+    "start": "hugo serve --buildDrafts --gc"
   },
   "version": "1.0.0",
   "dependencies": {
