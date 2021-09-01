@@ -13,7 +13,7 @@
 		{{- if eq hugo.Environment "development" }}
 			{{- $options = merge $options (dict "minify" false) }}
 		{{- end }}
-		{{- $css := resources.Get "scss/styles.scss" | resources.ToCSS $options }}
+		{{- $css := resources.Get "scss/styles.scss" | resources.ToCSS $options | resources.Fingerprint }}
 		<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 		
 		{{/* Load JavaScript */}}
@@ -21,7 +21,7 @@
 		{{- if eq hugo.Environment "development" }}
 			{{- $buildArgs = dict "minify" false }}
 		{{- end }}
-		{{- $js := resources.Get "ts/main.ts" | js.Build $buildArgs | resources.Fingerprint "sha512" }}
+		{{- $js := resources.Get "ts/main.ts" | js.Build $buildArgs | resources.Fingerprint }}
 		<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 	</head>
 	<body>
