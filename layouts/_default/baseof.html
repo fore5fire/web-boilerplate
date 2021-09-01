@@ -14,7 +14,7 @@
 			{{- $options = merge $options (dict "minify" false) }}
 		{{- end }}
 		{{- $css := resources.Get "scss/styles.scss" | resources.ToCSS $options }}
-		<link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
+		<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 		
 		{{/* Load JavaScript */}}
 		{{- $buildArgs := dict "sourceMap" "inline" "minify" true }}
@@ -22,7 +22,7 @@
 			{{- $buildArgs = dict "minify" false }}
 		{{- end }}
 		{{- $js := resources.Get "ts/main.ts" | js.Build $buildArgs | resources.Fingerprint "sha512" }}
-		<script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+		<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 	</header>
 	<body>
 		<div id="push-footer">
