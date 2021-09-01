@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<header>
+	<head>
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0' name='viewport' charset="utf-8" />
 		<title>
 		{{- block "title" . -}}
@@ -23,7 +23,7 @@
 		{{- end }}
 		{{- $js := resources.Get "ts/main.ts" | js.Build $buildArgs | resources.Fingerprint "sha512" }}
 		<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-	</header>
+	</head>
 	<body>
 		<div id="push-footer">
 			<header id="site-header">
